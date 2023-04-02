@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Minimal by Steve Smith</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="page_resource/stylesheets/styles.css">
+    <link rel="stylesheet" href="page_resource/stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,182 +26,80 @@
         </ul>
       </header>
       <section>
-        <h1>GitHub Flavored Markdown</h1>
+        <h1><b>프로젝트 소개</b></h1>
+        <hr>
+        <p>
+          우리 프로젝트의 결과물은 어플이다.
+          사용자가 어플에 사진을 입력하고 스타일을 선택하면,
+          그 사진을 3D로 복원하고 3D 결과물에 스타일을 입혀서
+          3D 결과물과 사용자가 상호작용할 수 있는 어플을 제작한다.
+        </p>
+        <br>
 
-        <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p>
+        <h1><b>Abstract</b></h1>
+        <hr>
+        <p>
+          Sight is the most powerful sense among the five senses.
+          <br><br>
+          There are several attempts to achieve visual interaction between humans and systems in many fields.
+          <br><br>
+          In our projects, we develop an app where the input is a photo but the output is a 3D object users can interact with.
+        </p>
+        <br>
 
-        <p>Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:</p>
+        <h1><b>소개합니다!</b></h1>
+        <hr>
+        <p><em>사진 한장으로 만드는 자신만의 3D 입체 사진</em></p>
 
-        <p>Roses are red<br>
-        Violets are blue</p>
+        <img src="page_resource/imgs/moving_cat.gif" alt="moving cat">
 
-        <p>The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:</p>
+        <p>사용자에게 입력받은 하나의 사진을 3D로 변환 후, Stylization 해주는 어플리케이션입니다. 
+          기존에 없는 새로운 타입의 사진 편집 어플리케이션이며, 사용자로 하여금 새로움과 재미를 선사합니다. 
+          3D화 된 결과물에는 유명 화가의 화풍 혹은 그림 장르와 같은 여러 테마를 적용이 가능합니다.
+        </p>
+        <br>
 
-        <p>Roses are red<br><br>
-        Violets are blue</p>
+        <h1><b>어떤 기술로?</b></h1>
+        <hr>
+        <p>
+          <img src="page_resource/imgs/tech.png" alt="tech">
+          <h2>AI</h2>
+          <p>
+            <a href="https://shihmengli.github.io/3D-Photo-Inpainting/"><b>3D photo inpainting</b></a> 
+            : 물체에 의해 가려진 영역의 color와 depth 를 예측하여 얻은 color와 depth 값을 추출합니다.
+            <br><br>
+            <a href="https://pages.cs.wisc.edu/~fmu/style3d/"><b>3D photo Stylization</b></a> 
+              : 3D photo inpainting으로부터 얻은 color와 depth 정보를 통해 이미지를 3D화 후 stylization을 수행합니다.
+          </p>
+        </p>
 
-        <p>Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.</p>
+        <br>
+        
+        <h2>Front-End (IOS)</h2>
+          <p>
+            <b>AVFoundation</b> : 사진 촬영 및 필터 선택을 위한 customcameraview 구현에 사용합니다.
+            <br><br>
+            <b>SceneKit</b> : 3D모델로 구현화된 결과물을 화면에 출력하기 위해 사용합니다.
+          </p>
 
-        <h2>A bit of the GitHub spice</h2>
+        <br>
+        
+        <h2>Back-End</h2>
+          <p>
+            <b>AWS</b> : REST API 구현 및 EC2 인스턴스, S3 스토리지를 위해 사용합니다.
+            <br><br>
+            <b>Spring</b> : AI 모델 구동 서버 구축을 위해 사용합니다.
+          </p>
+        
+        <br><br>
+        
+        <h1><b>어떻게 쓰는지?</b></h1>
+        <hr>
+        <pre>미정
+          
+        </pre>
 
-        <p>In addition to the changes in the previous section, certain references are auto-linked:</p>
-
-        <ul>
-          <li>SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2</li>
-          <li>User@SHA ref: <a href="https://github.com/mojombo/product/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo@<tt>be6a8cc</tt></a></li>
-          <li>User/Project@SHA: <a href="https://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo/god@<tt>be6a8cc</tt></a></li>
-          <li>#Num: <a href="https://github.com/github/product/issues/1" class="issue-link" title="Baseline: What is up in the air right now?">#1</a></li>
-          <li>User/#Num: mojombo#1</li>
-          <li>User/Project#Num: <a href="https://github.com/mojombo/god/issues/1" class="issue-link" title="The server is not available (or you do not have permissions to access it)">mojombo/god#1</a></li>
-        </ul>
-
-        <p>These are dangerous goodies though, and we need to make sure email addresses don't get mangled:</p>
-
-        <p>My email addy is <a href="mailto:tom@github.com">tom@github.com</a>.</p>
-
-        <h2>Math is hard, let's go shopping</h2>
-
-        <p>In first grade I learned that 5 &gt; 3 and 2 &lt; 7. Maybe some arrows. 1 -&gt; 2 -&gt; 3. 9 &lt;- 8 &lt;- 7.</p>
-
-        <p>Triangles man! a^2 + b^2 = c^2</p>
-
-        <h2>We all like making lists</h2>
-
-        <p>The above header should be an H2 tag. Now, for a list of fruits:</p>
-
-        <ul>
-          <li>Red Apples</li>
-          <li>Purple Grapes</li>
-          <li>Green Kiwifruits</li>
-        </ul>
-
-        <p>Let's get crazy:</p>
-
-        <ol>
-          <li>
-            <p>This is a list item with two paragraphs. Lorem ipsum dolor<br>
-            sit amet, consectetuer adipiscing elit. Aliquam hendrerit<br>
-            mi posuere lectus.</p>
-
-            <p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet<br>
-            vitae, risus. Donec sit amet nisl. Aliquam semper ipsum<br>
-            sit amet velit.</p>
-          </li>
-          <li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
-        </ol>
-
-        <p>What about some code <strong>in</strong> a list? That's insane, right?</p>
-
-        <ol>
-          <li>
-            <p>In Ruby you can map like this:</p>
-
-            <pre><code>['a', 'b'].map { |x| x.uppercase }</code></pre>
-          </li>
-          <li>
-            <p>In Rails, you can do a shortcut:</p>
-
-            <pre><code>['a', 'b'].map(&amp;:uppercase)</code></pre>
-          </li>
-        </ol>
-
-        <p>Some people seem to like definition lists</p>
-
-        <dl>
-          <dt>Lower cost</dt>
-          <dd>The new version of this product costs significantly less than the previous one!</dd>
-          <dt>Easier to use</dt>
-          <dd>We've changed the product so that it's much easier to use!</dd>
-        </dl>
-
-        <h2>I am a robot</h2>
-
-        <p>Maybe you want to print <code>robot</code> to the console 1000 times. Why not?</p>
-
-        <pre><code>def robot_invasion
-  puts("robot " * 1000)
-end
-</code></pre>
-
-        <p>You see, that was formatted as code because it's been indented by four spaces.</p>
-
-        <p>How about we throw some angle braces and ampersands in there?</p>
-
-        <pre><code>&lt;div class="footer"&gt;
-    &amp;copy; 2004 Foo Corporation
-&lt;/div&gt;
-</code></pre>
-
-        <h2>Set in stone</h2>
-
-        <p>Preformatted blocks are useful for ASCII art:</p>
-
-        <pre>             ,-.
-    ,     ,-.   ,-.
-   / \   (   )-(   )
-   \ |  ,.&gt;-(   )-&lt;
-    \|,' (   )-(   )
-     Y ___`-'   `-'
-     |/__/   `-'
-     |
-     |
-     |    -hrr-
-  ___|_____________
-</pre>
-
-        <h2>Playing the blame game</h2>
-
-        <p>If you need to blame someone, the best way to do so is by quoting them:</p>
-
-        <blockquote>
-        <p>I, at any rate, am convinced that He does not throw dice.</p>
-        </blockquote>
-
-        <p>Or perhaps someone a little less eloquent:</p>
-
-        <blockquote>
-        <p>I wish you'd have given me this written question ahead of time so I<br>
-        could plan for it... I'm sure something will pop into my head here in<br>
-        the midst of this press conference, with all the pressure of trying to<br>
-        come up with answer, but it hadn't yet...</p>
-
-        <p>I don't want to sound like<br>
-        I have made no mistakes. I'm confident I have. I just haven't - you<br>
-        just put me under the spot here, and maybe I'm not as quick on my feet<br>
-        as I should be in coming up with one.</p>
-        </blockquote>
-
-        <h2>Table for two</h2>
-
-        <table>
-          <tbody>
-        <tr>
-            <th>ID</th>
-        <th>Name</th>
-        <th>Rank</th>
-          </tr>
-          <tr>
-            <td>1</td>
-        <td>Tom Preston-Werner</td>
-        <td>Awesome</td>
-          </tr>
-          <tr>
-            <td>2</td>
-        <td>Albert Einstein</td>
-        <td>Nearly as awesome</td>
-          </tr>
-        </tbody>
-        </table>
-
-        <h2>Crazy linking action</h2>
-
-        <p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from<br>
-        <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+  
     </div>
     <script src="javascripts/scale.fix.js"></script>
   </body>
